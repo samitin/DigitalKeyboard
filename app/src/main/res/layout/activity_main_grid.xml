@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+<GridLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+android:orientation="horizontal"
+    android:columnCount="4">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_clear"
+            style="@style/ButtonStyle"
+           android:gravity="center"
+           android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:text="@string/clear"
+            android:textColor="@color/red" />
+
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:gravity="center"
+            android:layout_width="@dimen/button_width"
+            android:id="@+id/button_delite"
+            style="@style/ButtonStyle"
+            android:layout_height="wrap_content"
+            android:text="@string/delite"
+            android:textColor="@color/green"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:gravity="center"
+            android:layout_width="@dimen/button_width"
+            android:id="@+id/button_percent"
+            style="@style/ButtonStyle"
+
+            android:layout_height="wrap_content"
+            android:text="@string/percent"
+            android:textColor="@color/green" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:gravity="center"
+            android:layout_width="@dimen/button_width"
+            android:id="@+id/button_plus"
+            style="@style/ButtonStyle"
+            android:layout_height="wrap_content"
+            android:text="@string/plus"
+            android:textColor="@color/green" />
+
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_1"
+            style="@style/ButtonStyle"
+            android:gravity="center"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:text="@string/_1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_2"
+            style="@style/ButtonStyle"
+            android:gravity="center"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:text="@string/_2" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_3"
+            style="@style/ButtonStyle"
+            android:gravity="center"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:text="@string/_3" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_minus"
+            style="@style/ButtonStyle"
+            android:gravity="center"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:text="@string/minus"
+            android:textColor="@color/green" />
+
+
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_4"
+            style="@style/ButtonStyle"
+            android:gravity="center"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:text="@string/_4" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_5"
+            style="@style/ButtonStyle"
+            android:gravity="center"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:text="@string/_5" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_6"
+            style="@style/ButtonStyle"
+            android:gravity="center"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:text="@string/_6" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_divider"
+            style="@style/ButtonStyle"
+            android:gravity="center"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:text="@string/divider"
+            android:textColor="@color/green" />
+
+
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_7"
+            style="@style/ButtonStyle"
+            android:gravity="center"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:text="@string/_7" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_8"
+            style="@style/ButtonStyle"
+            android:gravity="center"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:text="@string/_8" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_9"
+            style="@style/ButtonStyle"
+            android:gravity="center"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:text="@string/_9" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_myltiply"
+            style="@style/ButtonStyle"
+            android:gravity="center"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:textColor="@color/green" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_point"
+            style="@style/ButtonStyle"
+            android:gravity="center"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:text="@string/_point" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_0"
+            style="@style/ButtonStyle"
+            android:gravity="center"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:text="@string/_0" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_"
+            style="@style/ButtonStyle"
+            android:gravity="center"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:text="+-" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_equals"
+            style="@style/ButtonStyle"
+            android:gravity="center"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:text="@string/equals"
+            android:textColor="@color/green" />
+
+</GridLayout>
+</FrameLayout>
