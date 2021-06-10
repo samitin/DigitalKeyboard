@@ -175,7 +175,7 @@ android:orientation="horizontal"
             android:text="@string/_0" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_"
+            android:id="@+id/button_plus_minus"
             style="@style/ButtonStyle"
             android:gravity="center"
             android:layout_width="@dimen/button_width"
