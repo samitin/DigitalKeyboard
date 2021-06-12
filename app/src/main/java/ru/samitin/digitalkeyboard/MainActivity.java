@@ -145,12 +145,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putSerializable(keyCounters,colculeteData);
+        outState.putString("editText",editText.getText().toString());
     }
 
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         colculeteData=(ColculeteData)savedInstanceState.getSerializable(keyCounters);
+        editText.setText(savedInstanceState.getString("editText"));
 
     }
 }
