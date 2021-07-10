@@ -58,25 +58,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.button_plus:
                 calculatorData.state=CalculatorData.PLUS;
-                calculatorData.clickSing(Double.parseDouble(editText.getText().toString()));
+                editText.setText(""+calculatorData.clickSing(Double.parseDouble(editText.getText().toString())));
                 break;
             case R.id.button_minus:
                 calculatorData.state=CalculatorData.MINUS;
-                calculatorData.clickSing(Double.parseDouble(editText.getText().toString()));
+                editText.setText(""+calculatorData.clickSing(Double.parseDouble(editText.getText().toString())));
                 break;
             case R.id.button_myltiply:
                 calculatorData.state=CalculatorData.MULTIPLY;
-                calculatorData.clickSing(Double.parseDouble(editText.getText().toString()));
+                editText.setText(""+calculatorData.clickSing(Double.parseDouble(editText.getText().toString())));
                 break;
             case R.id.button_divider:
                 calculatorData.state=CalculatorData.DIVIDER;
-                calculatorData.clickSing(Double.parseDouble(editText.getText().toString()));
+                editText.setText(""+calculatorData.clickSing(Double.parseDouble(editText.getText().toString())));
                 break;
             case R.id.button_equals:
                 calculatorData.state=CalculatorData.EQUALS;
-                calculatorData.clickSing(Double.parseDouble(editText.getText().toString()));
+                editText.setText(""+calculatorData.clickSing(Double.parseDouble(editText.getText().toString())));
                 break;
         }
+
     }
     private void clickPlusMinus(int id){
         if (id==R.id.button_plus_minus){
