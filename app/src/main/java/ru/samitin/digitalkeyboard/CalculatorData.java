@@ -9,7 +9,6 @@ public class CalculatorData {
     public static final String MINUS="-";
     public static final String MULTIPLY="*";
     public static final String DIVIDER="/";
-    public static final String EQUALS="=";
     public String state="";
 
     public String clickSing(double number){
@@ -30,8 +29,6 @@ public class CalculatorData {
                 case DIVIDER:
                     numberOne = numberOne / number;
                     break;
-                case EQUALS:
-                    return ""+numberOne;
             }
                 return "";
         }else {
@@ -39,6 +36,21 @@ public class CalculatorData {
             return "";
         }
     }
+    public String getEquals(double number){
+        String numberEquals="";
+        if (!numberOne.equals(Double.NaN)) {
+            switch (state) {
+                case PERCENT: numberEquals= ""+(numberOne % number);break;
+                case PLUS: numberEquals= ""+(numberOne + number);break;
+                case MINUS: numberEquals= ""+(numberOne - number);break;
+                case MULTIPLY: numberEquals= ""+(numberOne * number);break;
+                case DIVIDER: numberEquals= ""+(numberOne / number);break;
+            }
+            numberOne=Double.NaN;
+        }
+         return numberEquals;
+    }
+
 
     public void delite(){
         numberOne=Double.NaN;

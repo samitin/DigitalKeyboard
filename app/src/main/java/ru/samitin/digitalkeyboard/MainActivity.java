@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (id){
             case R.id.button_percent:
                 calculatorData.state=CalculatorData.PERCENT;
-                calculatorData.clickSing(Double.parseDouble(editText.getText().toString()));
+                editText.setText(""+calculatorData.clickSing(Double.parseDouble(editText.getText().toString())));
                 break;
             case R.id.button_plus:
                 calculatorData.state=CalculatorData.PLUS;
@@ -73,8 +73,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 editText.setText(""+calculatorData.clickSing(Double.parseDouble(editText.getText().toString())));
                 break;
             case R.id.button_equals:
-                calculatorData.state=CalculatorData.EQUALS;
-                editText.setText(""+calculatorData.clickSing(Double.parseDouble(editText.getText().toString())));
+                editText.setText(""+calculatorData.getEquals(Double.parseDouble(editText.getText().toString())));
                 break;
         }
 
