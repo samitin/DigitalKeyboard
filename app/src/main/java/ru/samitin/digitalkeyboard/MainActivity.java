@@ -11,14 +11,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     int[]nubers;
     int[]sings;
     EditText editText;
+    CalculatorData calculatorData;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         editText=findViewById(R.id.editTextNumber);
-
-       inicialisationButtons();
+        calculatorData=new CalculatorData();
+        inicialisationButtons();
 
     }
     private void inicialisationButtons(){
@@ -52,16 +53,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void clickSings(int id){
         switch (id){
             case R.id.button_percent:
+                calculatorData.state=CalculatorData.PERCENT;
+                calculatorData.clickSing(Double.parseDouble(editText.getText().toString()));
                 break;
             case R.id.button_plus:
+                calculatorData.state=CalculatorData.PLUS;
+                calculatorData.clickSing(Double.parseDouble(editText.getText().toString()));
                 break;
             case R.id.button_minus:
+                calculatorData.state=CalculatorData.MINUS;
+                calculatorData.clickSing(Double.parseDouble(editText.getText().toString()));
                 break;
             case R.id.button_myltiply:
+                calculatorData.state=CalculatorData.MULTIPLY;
+                calculatorData.clickSing(Double.parseDouble(editText.getText().toString()));
                 break;
             case R.id.button_divider:
+                calculatorData.state=CalculatorData.DIVIDER;
+                calculatorData.clickSing(Double.parseDouble(editText.getText().toString()));
                 break;
             case R.id.button_equals:
+                calculatorData.state=CalculatorData.EQUALS;
+                calculatorData.clickSing(Double.parseDouble(editText.getText().toString()));
                 break;
         }
     }
@@ -75,7 +88,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     private void clickDelite(int id){
         if (id==R.id.button_delite){
-
+            editText.setText("");
+            calculatorData.delite();
         }
     }
 
