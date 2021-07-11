@@ -9,7 +9,6 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     int[]nubers;
-    int[]sings;
     EditText editText;
     CalculatorData calculatorData;
     @Override
@@ -28,16 +27,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         for (int num:nubers)
             findViewById(num).setOnClickListener(this);
 
-        sings=new int[]{R.id.button_percent,R.id.button_plus,R.id.button_minus,R.id.button_myltiply,
-                R.id.button_divider,R.id.button_equals};
-        for (int sing:sings)
+        for (int sing:new int[]{R.id.button_percent,R.id.button_plus,R.id.button_minus,R.id.button_myltiply,
+                                R.id.button_divider,R.id.button_equals,R.id.button_clear,R.id.button_delite,
+                                R.id.button_point,R.id.button_point,R.id.button_plus_minus})
             findViewById(sing).setOnClickListener(this);
-
-        findViewById(R.id.button_clear).setOnClickListener(this);
-        findViewById(R.id.button_delite).setOnClickListener(this);
-        findViewById(R.id.button_point).setOnClickListener(this);
-        findViewById(R.id.button_plus_minus).setOnClickListener(this);
-
     }
 
     @Override
