@@ -1,13 +1,16 @@
 package ru.samitin.digitalkeyboard;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
+    private static final String KEY_EDIT_TEXT="KEY_EDIT_TEXT";
+    private static final String KEY_CALCULATOR_DATA="KEY_CALCULATOR_DATA";
     int[]nubers;
     EditText editText;
     CalculatorData calculatorData;
@@ -100,5 +103,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (id==R.id.button_clear)
            if (editText.getText().toString().length()>0)
                editText.setText(editText.getText().toString().substring(0,editText.getText().toString().length()-1));
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putParcelable(KEY_CALCULATOR_DATA,calculatorData);
+        outState.putString(KEY_EDIT_TEXT,editText.getText().toString());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        calculatorData=savedInstanceState.getParcelable(KEY_CALCULATOR_DATA);
+        editText.setText(savedInstanceState.getString(KEY_EDIT_TEXT));
     }
 }
