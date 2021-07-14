@@ -19,6 +19,10 @@
         <item>@id/button_myltiply</item>
         <item>@id/button_divider</item>
         <item>@id/button_equals</item>
+        <item>@id/button_clear</item>
+        <item>@id/button_delite</item>
+        <item>@id/button_point</item>
+        <item>@id/button_plus_minus</item>
     </integer-array>
 
 </resources>

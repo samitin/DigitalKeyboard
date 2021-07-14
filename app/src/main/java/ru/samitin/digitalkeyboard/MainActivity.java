@@ -3,6 +3,7 @@ package ru.samitin.digitalkeyboard;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.view.View;
@@ -25,15 +26,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
     private void inicialisationButtons(){
-        nubers=new int[]{R.id.button_0,R.id.button_1,R.id.button_2,R.id.button_3,R.id.button_4,
-                R.id.button_5,R.id.button_6,R.id.button_7,R.id.button_8,R.id.button_9};
-        for (int num:nubers)
-            findViewById(num).setOnClickListener(this);
+        nubers=getResourceArrayId(R.array.numbers);
+        for (int number:nubers)
+            findViewById(number).setOnClickListener(this);
 
-        for (int sing:new int[]{R.id.button_percent,R.id.button_plus,R.id.button_minus,R.id.button_myltiply,
-                                R.id.button_divider,R.id.button_equals,R.id.button_clear,R.id.button_delite,
-                                R.id.button_point,R.id.button_point,R.id.button_plus_minus})
+        for (int sing:getResourceArrayId(R.array.sings))
             findViewById(sing).setOnClickListener(this);
+    }
+    private int[] getResourceArrayId(int arrayId){
+        TypedArray typedArray=getResources().obtainTypedArray(arrayId);
+        int[]resArrayId=new int[getResources().getIntArray(arrayId).length];
+        for (int i=0;i<resArrayId.length;i++)
+            resArrayId[i]=typedArray.getResourceId(i,-1);
+        return resArrayId;
     }
 
     @Override

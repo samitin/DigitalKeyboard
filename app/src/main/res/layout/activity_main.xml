@@ -7,29 +7,35 @@
     tools:context=".MainActivity"
     android:background="@drawable/bitmapicon" >
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="2"
-        android:orientation="horizontal">
+        android:layout_weight="5">
 
-        <EditText
-            android:id="@+id/editTextNumber"
-            android:layout_width="match_parent"
+        <Switch
+            android:gravity="bottom"
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:textSize="30sp"
-            android:textColor="@color/white"
-            android:ems="10"
-            android:inputType="number" />
-    </LinearLayout>
+            android:text="Ночная тема" />
+
+
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:orientation="vertical">
-
+        <EditText
+            android:id="@+id/editTextNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="30sp"
+            tools:text="76584756"/>
         <include
             layout="@layout/activity_main_grid"
             android:layout_width="match_parent"
