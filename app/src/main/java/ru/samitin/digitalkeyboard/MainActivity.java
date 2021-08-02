@@ -54,7 +54,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         editText=findViewById(R.id.editTextNumber);
         calculatorData=new CalculatorData();
         inicialisationButtons();
-
+        Intent intent=getIntent();
+        Bundle bundle=intent.getExtras();
+        if (bundle==null)
+            return;
+        String text=bundle.getString("PARAM");
+        editText.setText(text);
     }
 
 

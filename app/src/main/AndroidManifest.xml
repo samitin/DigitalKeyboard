@@ -20,7 +20,16 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter android:label="ru.geekbrains.intentprocess.MainActivity">
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <!-- Принимаем URI с началом "digitalkeyboard://intent" -->
+            <data android:scheme="digitalkeyboard"
+                android:host="intent" />
+            </intent-filter>
         </activity>
+
         <activity android:name=".ChangeThemeActivity"></activity>
 
     </application>
