@@ -18,6 +18,12 @@
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:layout_gravity="top|end"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_settings"
+            android:text="@string/btn_settings_text"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="top|end"/>
 
         <EditText
             android:layout_marginTop="50sp"
