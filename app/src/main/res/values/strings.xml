@@ -18,4 +18,5 @@
     <string name="delite">del</string>
     <string name="clear">c</string>
     <string name="percent">%</string>
+    <string name="switch_text">светлая тема</string>
 </resources>

@@ -3,17 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bitmapicon"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:background="@drawable/bitmapicon" >
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="2"
-        android:orientation="horizontal">
+        android:orientation="vertical">
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/swith_theme"
+            android:text="@string/switch_text"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="top|end"/>
 
         <EditText
+            android:layout_marginTop="50sp"
             android:id="@+id/editTextNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
