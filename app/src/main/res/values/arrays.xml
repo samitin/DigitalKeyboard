@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="numbers">
+        <item>@id/button_0</item>
+        <item>@id/button_1</item>
+        <item>@id/button_2</item>
+        <item>@id/button_3</item>
+        <item>@id/button_4</item>
+        <item>@id/button_5</item>
+        <item>@id/button_6</item>
+        <item>@id/button_7</item>
+        <item>@id/button_8</item>
+        <item>@id/button_9</item>
+    </integer-array>
+    <integer-array name="sings">
+        <item>@id/button_percent</item>
+        <item>@id/button_plus</item>
+        <item>@id/button_minus</item>
+        <item>@id/button_myltiply</item>
+        <item>@id/button_divider</item>
+        <item>@id/button_equals</item>
+        <item>@id/button_clear</item>
+        <item>@id/button_delite</item>
+        <item>@id/button_point</item>
+        <item>@id/button_plus_minus</item>
+    </integer-array>
+
+</resources>
