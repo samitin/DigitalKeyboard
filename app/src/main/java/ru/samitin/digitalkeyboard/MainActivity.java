@@ -2,14 +2,21 @@ package ru.samitin.digitalkeyboard;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+
+import com.google.android.material.switchmaterial.SwitchMaterial;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+
+
     private static final String KEY_EDIT_TEXT="KEY_EDIT_TEXT";
     private static final String KEY_CALCULATOR_DATA="KEY_CALCULATOR_DATA";
     int[]nubers;
@@ -18,7 +25,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if(savedInstanceState==null)
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY);
         setContentView(R.layout.activity_main);
+
+        SwitchMaterial switchTheme=findViewById(R.id.swith_theme);
+        switchTheme.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b)
+                    getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                else
+                    getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+            }
+        });
 
         editText=findViewById(R.id.editTextNumber);
         calculatorData=new CalculatorData();
