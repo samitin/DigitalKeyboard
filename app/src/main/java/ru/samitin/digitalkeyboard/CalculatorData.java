@@ -12,26 +12,7 @@ public class CalculatorData implements Parcelable {
     public static final String DIVIDER="/";
     public String state="";
     public CalculatorData(){}
-    protected CalculatorData(Parcel in) {
-        if (in.readByte() == 0) {
-            number = null;
-        } else {
-            number = in.readDouble();
-        }
-        state = in.readString();
-    }
 
-    public static final Creator<CalculatorData> CREATOR = new Creator<CalculatorData>() {
-        @Override
-        public CalculatorData createFromParcel(Parcel in) {
-            return new CalculatorData(in);
-        }
-
-        @Override
-        public CalculatorData[] newArray(int size) {
-            return new CalculatorData[size];
-        }
-    };
 
     public String clickSing(double number){
         if (!this.number.equals(Double.NaN)) {
@@ -72,11 +53,31 @@ public class CalculatorData implements Parcelable {
         }
          return numberEquals;
     }
-
-
     public void delite(){
         this.number=Double.NaN;
     }
+
+    protected CalculatorData(Parcel in) {
+        if (in.readByte() == 0) {
+            number = null;
+        } else {
+            number = in.readDouble();
+        }
+        state = in.readString();
+    }
+
+    public static final Creator<CalculatorData> CREATOR = new Creator<CalculatorData>() {
+        @Override
+        public CalculatorData createFromParcel(Parcel in) {
+            return new CalculatorData(in);
+        }
+
+        @Override
+        public CalculatorData[] newArray(int size) {
+            return new CalculatorData[size];
+        }
+    };
+
 
     @Override
     public int describeContents() {
